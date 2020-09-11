@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "e973aa34-5ebf-4490-9881-122ba514c1ca",
+		"name": "quadratic equation API",
+		"description": "API для решения квадратных уравнений",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /grab",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"A\": 1,\n    \"B\": 3,\n    \"C\": 1\n}\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/grab",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"grab"
+					]
+				},
+				"description": "отправляет коэффициенты уравнения"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /solve",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/solve",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"solve"
+					]
+				},
+				"description": "решает квадратное уравнение и возвращает коэффициенты и число вещественных корней уравнения"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
